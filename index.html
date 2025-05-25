@@ -1,52 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Header Section -->
-  <section class="hero">
-    <h1>Hi, I'm Sam</h1>
-    <p>Welcome to my personal portfolio website!</p>
-  </section>
+body {
+  background-color: #f0f0f0; 
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0; 
+  padding: 0; 
+}
 
-  <nav class="navbar">
-    <a href="#bio">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#songs">Songs</a>
-  </nav>
+.hero {
+  position: relative;
+  background-image: url('/img/space.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #4a90e2; 
+  color: white; 
+  text-align: center; 
+  padding: 40px 20px; 
+}
 
-  <!-- Bio Section -->
-  <section class="bio">
-    <h2>About Me</h2>
-    <p>
-      I'm CS major who enjoys creating things and refining my skills. I love learning new technologies and applying them to real-world problems. In my free time, I enjoy listening to music, reading, watching shows,and playing video games.
-    </p>
-  </section>
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 37, 37, 0.5); /* Semi-transparent black */
+  z-index: 1; /* Place behind the text */
+}
 
-  <!-- Skills Section -->
-  <section class="skills">
-    <h2>My Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Haskell</li>
-      <li>Python</li>
-      <li>Java</li>
-    </ul>
-  </section>
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
 
-  <!-- Current top Five Songs-->
-  <section class="songs">
-    <h2>Current "On Repeat's"</h2>
-    <ul>
-      <li>Strawberry Perfume by Chenayder</li>
-      <li>Symptom of Life by willow</li>
-      <li>Up and down by Teezo Touchdown</li>
-    </ul>
-  </section>
-</body>
-</html>
+.bio, .skills {
+  background-color: #e0f7fa; 
+  margin: 20px auto;
+  padding: 20px; 
+  max-width: 600px; 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.songs{
+  background-color: #e0f7fa; 
+  padding: 20px; 
+  border-radius: 8px; 
+  margin: 20px auto; 
+  max-width: 600px;
+ 
+}
+
+.songs ul {
+  list-style-type: none;    /* Remove bullet points */
+  padding: 0;               /* Remove default padding */
+  margin: 0;                /* Remove default margin */
+  text-align: center;       /* Center the list items */
+}
+
+.songs ul li {
+  display: inline-block;    /* Show list items in a row */
+  margin: 0 15px;           /* Add space between items */
+  background: #b2ebf2;      /* Light background for each song */
+  padding: 8px 16px;        /* Add some space inside each item */
+  border-radius: 6px;       /* Rounded corners */
+}
+
+h1 {
+  color: rgb(255, 255, 255);  
+}
+
+h2 {
+  color: #4a90e2; 
+}
+
+.navbar {
+  background-color: #df9e6d;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #4a90e2;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.material-symbols-outlined {
+  font-size: 28px;
+  display: block; 
+  margin-bottom: 0px;
+}
